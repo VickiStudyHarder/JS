@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400");
-
+@import url("https://fonts.googleapis.com/css?family=Poppins:600");
 html {
   font-size: 62.5%;
 } /*10px*/
@@ -34,6 +34,7 @@ h1 {
 }
 
 h2 {
+  font-weight: 600;
   font-size: 3.157rem;
 }
 
@@ -58,7 +59,7 @@ h3 {
 
 /* container: set max width for layout */
 .container {
-  max-width: 1140px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -71,7 +72,11 @@ h3 {
 }
 
 .block--header {
+  text-transform: uppercase;
+  /* font-weight: 800; */
   text-align: center;
+  margin-bottom: 2rem;
+  color: rgb(219, 138, 127);
 }
 
 /* list */
@@ -162,8 +167,13 @@ h3 {
   padding-left: 2rem;
 }
 
+.content-list--1x2 {
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+}
+
 .content-list li {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .content-list li::first-letter {
@@ -178,7 +188,7 @@ h3 {
 .grid > div {
   background-color: rgba(255, 192, 203, 0.5);
   border-radius: 10px;
-  padding: 4rem 4rem;
+  padding: 2rem 4rem;
 }
 
 @media screen and (min-width: 768px) {
