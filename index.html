@@ -5,8 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/eclipse.min.css"
+    />
     <link rel="stylesheet" href="/css/style.css" />
-    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.62.0/lib/codemirror.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.62.0/lib/codemirror.js"></script>
   </head>
   <body>
     <header>
@@ -230,71 +239,36 @@
               if (condition) { statement } else if (condition) { statement }
               else { statement }
             </li>
+            <li>if hour is between 6am and 12pm: good morning;</li>
+            <li>hour is between 12pm and 6pm: good afternoon;</li>
+            <li>otherwise: good evening;</li>
           </ul>
+        </div>
+        <div id="codeArea1">
+          <textarea id="code-editor">
+//if..else;
+let hour = 10;
+if (hour >= 6 && hour < 12) {
+    console.log('Good morning');
+} 
+else if (hour >= 12 && hour < 18) {
+    console.log('Good afternoon');
+} 
+else {
+    console.log('Good evening');
+}
+
+        </textarea
+          >
+          <div id="console"></div>
+          <button id="run-button">run</button>
         </div>
 
         <div>
           <h3>switch..case</h3>
-          <ul class="content-list content-list--1x2">
-            <li>x - y</li>
-            <li>x + y</li>
-            <li>x * y</li>
-            <li>x / y</li>
-            <li>x % y</li>
-            <li>x ** y</li>
-            <li>console.log(x++): show 10 but become 11</li>
-            <li>console.log(++x): show 11</li>
-            <li>console.log(x--): show 10 but become 9</li>
-            <li>console.log(--x): show 9</li>
-          </ul>
+          <div>sdas</div>
         </div>
 
-        <div>
-          <h3>for</h3>
-          <ul class="content-list content-list--1x2">
-            <li>x += 5 -> x = x + 5</li>
-            <li>x *= 5 -> x = x * 5</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>while</h3>
-          <ul class="content-list content-list--1x2">
-            <li>relational: >, <, >=, <=,</li>
-            <li>equality: ===, !==</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>equality operator</h3>
-          <ul class="content-list">
-            <li>strict equality: same type and same value</li>
-            <li>lose equality: same value different type</li>
-            <li>console.log(true == 1); return true</li>
-          </ul>
-        </div>
-        <div>
-          <h3>ternary operator</h3>
-          <ul class="content-list">
-            <li>
-              start with condition if condition is true use first value else use
-              second value
-            </li>
-            <li>
-              if a customer has more than 100 Point, they are gold else they are
-              sliver
-            </li>
-            <li>let type = point > 100 ? "gold" : "silver";</li>
-          </ul>
-        </div>
-        <div>
-          <h3>logical operator</h3>
-          <ul class="content-list">
-            <li>logical AND (&&): return true if both operands are TRUE</li>
-            <li>logical OR (||): return true if one of the operand is true</li>
-            <li>NOT (!): return the opposite</li>
-          </ul>
-        </div>
         <div>
           <h3>logical operator with non-boolean</h3>
           <ul class="content-list">
@@ -310,21 +284,8 @@
             </li>
           </ul>
         </div>
-        <div>
-          <h3>bitwise operator</h3>
-          <ul class="content-list">
-            <li>1 = 00000001, 2 = 00000011</li>
-            <li>1 | 2 = 3: as it return 00000111</li>
-            <li>1 & 2 = 0: as it return 00000000</li>
-            <li>example use for access control system</li>
-          </ul>
-        </div>
-        <div>
-          <h3>operator precedence</h3>
-        </div>
       </div>
     </section>
-    
-
+    <script src="/script/codemirror.js"></script>
   </body>
 </html>

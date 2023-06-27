@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css?family=Poppins:400");
 @import url("https://fonts.googleapis.com/css?family=Poppins:600");
 html {
@@ -6,11 +7,11 @@ html {
 
 /* typography */
 body {
-  background: white;
+  /* background: white; */
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 1.75;
-  color: #000000;
+  /* color: #000000; */
 }
 
 p {
@@ -169,7 +170,7 @@ h3 {
 
 .content-list--1x2 {
   display: grid;
-  grid-template-columns: repeat(2,auto);
+  grid-template-columns: repeat(2, auto);
 }
 
 .content-list li {
@@ -195,4 +196,21 @@ h3 {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* CodeMirror */
+.cm-comment {
+  color: #43c841; /* 设置默认注释的颜色 */
+}
+
+.CodeMirror,
+#console,
+#run-button {
+  font-size: 1.4rem;
+}
+
+
+#codeArea1 {
+  grid-column: 2;
+  grid-row: 1 / span 2;
 }
