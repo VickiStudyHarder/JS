@@ -1,12 +1,769 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.62.0/lib/codemirror.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/eclipse.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.62.0/lib/codemirror.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="nav collapsible">
+        <a class="nav__brand" href="/"><img src="/image/js.png" alt="" /></a>
+        <!-- <svg class="icon icon--white nav__toggler">
+          <use xlink:href="/images/sprite.svg#menu"></use>
+        </svg> -->
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="/index.html">Home</a></li>
+          <li class="nav__item"><a href="/page/JS_1.html">JS 1</a></li>
+          <li class="nav__item"><a href="/page/JS_2.html">JS 2</a></li>
+          <li class="nav__item"><a href="/page/JS_3.html">JS 3</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- basic -->
+    <section class="block">
+      <h2 class="block--header">basic</h2>
+      <div class="container grid grid--1x2">
+        <div>
+          <h3>variable</h3>
+          <ul class="content-list">
+            <li>let name; to set variable, default value if undefined.</li>
+            <li>can't use reserved keyword</li>
+            <li>need to be meaningful</li>
+            <li>cannot start with a number</li>
+            <li>cannot contain space of hyphen(-)</li>
+            <li>are case-sensitive</li>
+          </ul>
+        </div>
+        <div>
+          <h3>constants</h3>
+          <ul class="content-list">
+            <li>const interestRate = 0.3; constant cannot be re-assign</li>
+          </ul>
+        </div>
+        <div>
+          <h3>primitive type</h3>
+          <ul class="content-list">
+            <li>string: let name = 'Vicki'</li>
+            <li>number: let age = 25;</li>
+            <li>boolean: isApproved = false;</li>
+            <li>
+              undefined: let firstName = undefined; normally if we don't assign
+              value, it is undefined
+            </li>
+            <li>null: used when we want to clear the value of a variable</li>
+          </ul>
+        </div>
+        <div>
+          <h3>dynamic typing</h3>
+          <ul class="content-list">
+            <li>
+              dynamic typing mean the type of variable can change at run time
+            </li>
+            <li>only one type for number no float etc</li>
+            <li>undefined is a type but also a value</li>
+          </ul>
+        </div>
+        <div>
+          <h3>reference type</h3>
+          <ul class="content-list">
+            <li>object</li>
+            <li>arrays</li>
+            <li>functions</li>
+            <li>type of functions</li>
+          </ul>
+        </div>
+        <div>
+          <h3>object</h3>
+          <ul class="content-list">
+            <li>
+              think of object as a person, which can have multiple feature
+            </li>
+            <li>
+              to access the object feature, dot notation or bracket notation
+            </li>
+            <li>person.age</li>
+            <li>person['name']</li>
+            <li>
+              person[selection] for when we don't know value until runtime
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>arrays</h3>
+          <ul class="content-list">
+            <li>a data structure, used to store a list of item</li>
+            <li>let selectionColor = ['red', 'blue']</li>
+            <li>length of the array is dynamic, it can change at rum time</li>
+            <li>type for variable inside the array is dynamic</li>
+            <li>we can store different type of value in an array</li>
+          </ul>
+        </div>
+        <div>
+          <h3>functions</h3>
+          <ul class="content-list">
+            <li>function can have multiple parameter</li>
+            <li>function should just be responsible for one thing</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>type of functions</h3>
+          <ul class="content-list">
+            <li>performing a task</li>
+            <li>calculate a value</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- operator -->
+    <section class="block">
+      <h2 class="block--header">operator</h2>
+      <div class="container grid grid--1x2">
+        <div>
+          <h3>javaScript operator</h3>
+          <ul class="content-list">
+            <li>use operator to create expression to create algorithm</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>arithmetic operator</h3>
+          <ul class="content-list content-list--1x2">
+            <li>x - y</li>
+            <li>x + y</li>
+            <li>x * y</li>
+            <li>x / y</li>
+            <li>x % y</li>
+            <li>x ** y</li>
+            <li>console.log(x++): show 10 but become 11</li>
+            <li>console.log(++x): show 11</li>
+            <li>console.log(x--): show 10 but become 9</li>
+            <li>console.log(--x): show 9</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>assignment operator</h3>
+          <ul class="content-list content-list--1x2">
+            <li>x += 5 -> x = x + 5</li>
+            <li>x *= 5 -> x = x * 5</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>comparison operator</h3>
+          <ul class="content-list content-list--1x2">
+            <li>relational: >, <, >=, <=,</li>
+            <li>equality: ===, !==</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>equality operator</h3>
+          <ul class="content-list">
+            <li>strict equality: same type and same value</li>
+            <li>lose equality: same value different type</li>
+            <li>console.log(true == 1); return true</li>
+          </ul>
+        </div>
+        <div>
+          <h3>ternary operator</h3>
+          <ul class="content-list">
+            <li>
+              start with condition if condition is true use first value else use
+              second value
+            </li>
+            <li>
+              if a customer has more than 100 Point, they are gold else they are
+              sliver
+            </li>
+            <li>let type = point > 100 ? "gold" : "silver";</li>
+          </ul>
+        </div>
+        <div>
+          <h3>logical operator</h3>
+          <ul class="content-list">
+            <li>logical AND (&&): return true if both operands are TRUE</li>
+            <li>logical OR (||): return true if one of the operand is true</li>
+            <li>NOT (!): return the opposite</li>
+          </ul>
+        </div>
+        <div>
+          <h3>logical operator with non-boolean</h3>
+          <ul class="content-list">
+            <li>
+              result of logical operator not necessary to be true or false
+              depend on the operands
+            </li>
+            <li>falsy: undefined, null, 0, false, '', NaN(not a number)</li>
+            <li>truthy: anything not falsy</li>
+            <li>
+              short circuiting: false || 2 || 1: return 2, get to truthy return
+              truthy and ignore the rest
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>bitwise operator</h3>
+          <ul class="content-list">
+            <li>1 = 00000001, 2 = 00000011</li>
+            <li>1 | 2 = 3: as it return 00000111</li>
+            <li>1 & 2 = 0: as it return 00000000</li>
+            <li>example use for access control system</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- control flow -->
+    <section class="block">
+      <h2 class="block--header">control flow</h2>
+      <div class="container grid grid--1x2">
+        <div>
+          <h3>if...else</h3>
+          <ul class="content-list">
+            <li>
+              if (condition) { statement } else if (condition) { statement }
+              else { statement }
+            </li>
+            <li>if hour is between 6am and 12pm: good morning;</li>
+            <li>hour is between 12pm and 6pm: good afternoon;</li>
+            <li>otherwise: good evening;</li>
+          </ul>
+        </div>
+        <div>
+          <h3>switch...case</h3>
+          <ul class="content-list">
+            <li>
+              switch (role) { case 'guest': console.log('Guest User') break;
+              //if not break it will execute to next block case 'moderator':
+              console.log('Moderator User') break; }
+            </li>
+            <li>if hour is between 6am and 12pm: good morning;</li>
+            <li>hour is between 12pm and 6pm: good afternoon;</li>
+            <li>otherwise: good evening;</li>
+          </ul>
+        </div>
+        <!-- for loop -->
+        <div>
+          <h3>for loop</h3>
+          <ul class="content-list">
+            <li>for (let i = 0; i < 5; i++) { console.log(i); }</li>
+            <li>0 1 2 3 4</li>
+            <li>
+              use % to get odd/even, start from the back with-- to reverse order
+            </li>
+            <li>i only accessible inside the loop</li>
+            <li>return in a loop will exit the loop</li>
+          </ul>
+        </div>
+        <!-- playground -->
+        <div id="codeArea1">
+          <h3>playground</h3>
+          <textarea class="cm-s-eclipse" id="code-editor1">
+  //if..else;
+  let hour = 10;
+  if (hour >= 6 && hour < 12) {
+      console.log('Good morning');
+  } 
+  else if (hour >= 12 && hour < 18) {
+      console.log('Good afternoon');
+  } 
+  else {
+      console.log('Good evening');
+  }
+          </textarea>
+          <div id="console1"></div>
+          <button id="run-button1">run</button>
+        </div>
+
+        <!-- while lop -->
+        <div>
+          <h3>while loop</h3>
+          <ul class="content-list">
+            <li>
+              let i = 0; while (i <= 5) { if (i % 2 != 0) console.log(i); i++; }
+            </li>
+            <li>1 3 5</li>
+            <li>need to declare the i outside the while loop</li>
+          </ul>
+        </div>
+
+        <!-- do while loop -->
+        <div>
+          <h3>do while loop</h3>
+          <ul class="content-list">
+            <li>
+              let i = 0; while (i <= 5) { if (i % 2 != 0) console.log(i); i++; }
+            </li>
+            <li>do while loop will at least execute once</li>
+          </ul>
+        </div>
+
+        <!-- for in loop -->
+        <div>
+          <h3>for in loop</h3>
+          <ul class="content-list">
+            <li>const person1 = { name : 'vicki', age: 30 };</li>
+            <li>for(let key in person1) console.log(key, person1[key]);</li>
+            <li>good for iterate over an object</li>
+          </ul>
+        </div>
+
+        <!-- for of loop -->
+        <div>
+          <h3>for of loop</h3>
+          <ul class="content-list">
+            <li>const colors = ["red", "blue", "green"];</li>
+            <li>for (let color of colors) { console.log(color); }</li>
+            <li>better then for in when iterate through array</li>
+          </ul>
+        </div>
+
+        <!-- break and continue -->
+        <div>
+          <h3>break and continue</h3>
+          <ul class="content-list">
+            <li>
+              while (q <= 10) { if (q % 2 === 0) { q++; continue; }
+              console.log(q); q++; }
+            </li>
+            <li>continue will bring the loop back to next while</li>
+            <li>break will just just out of while loop</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- object -->
+    <section class="block">
+      <h2 class="block--header">object</h2>
+      <div class="container grid grid--1x2">
+        <!-- basic -->
+        <div>
+          <h3>basic</h3>
+          <ul class="content-list">
+            <li>grouping related variable and functions</li>
+            <li>if a function is part of a object it is method</li>
+          </ul>
+        </div>
+        <!-- factory function -->
+        <div>
+          <h3>factory function</h3>
+          <ul class="content-list">
+            <li>use camel notation: oneTwoThreeFour</li>
+            <li>
+              when we want to create multiple object with the same method or
+              attributes.
+            </li>
+            <li>use dot notation to call a method inside an object</li>
+          </ul>
+        </div>
+        <!-- code space -->
+        <div id="codeArea2">
+          <textarea id="code-editor2">
+function createCircle(radius, location) { 
+    return { 
+        radius, 
+        draw()
+        { console.log("draw");
+        }, 
+    }; 
+}
+const circle1 = createCircle(10);
+console.log("circle1: ", circle1);
+circle1.draw();
+
+// constructor
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function() {
+        console.log("draw");
+    }
+}
+const circle2 = new Circle(1);
+
+
+            </textarea
+          >
+          <div id="console2"></div>
+          <button id="run-button2">run</button>
+        </div>
+        <!-- constructor function -->
+        <div>
+          <h3>constructor function</h3>
+          <ul class="content-list">
+            <li>Pascal notation:OneTwoThreeFour</li>
+            <li>pick one between constructor and factory</li>
+            <li>need to use new keyword when constructing a new object</li>
+          </ul>
+        </div>
+
+        <!-- dynamic object -->
+        <div>
+          <h3>dynamic object</h3>
+          <ul class="content-list">
+            <li>
+              objects are dynamic, we can add method to it using the dot
+              notation
+            </li>
+            <li>use delete key word to delete method or property</li>
+            <li>
+              const is used to create an object, it mean we can't reassign the
+              object but wee can change the object by changing the property
+            </li>
+          </ul>
+        </div>
+
+        <!-- constructor property -->
+        <div>
+          <h3>constructor property</h3>
+          <ul class="content-list">
+            <li>
+              each object have an constructor function, which is the internal
+              function that JS used to create the object
+            </li>
+          </ul>
+        </div>
+
+        <!-- function are object -->
+        <div>
+          <h3>function are object</h3>
+          <ul class="content-list">
+            <li>const person1 = { name : 'vicki', age: 30 };</li>
+            <li>for(let key in person1) console.log(key, person1[key]);</li>
+            <li>good for iterate over an object</li>
+          </ul>
+        </div>
+
+        <!-- value vs reference type -->
+        <div>
+          <h3>value vs reference type</h3>
+          <ul class="content-list">
+            <li>Primitives are copied by their value</li>
+            <li>
+              objects are copied by their reference, when copy an object, we
+              copied it's address so when we change the value using that
+              address, the changes will reflect to other variable as well
+            </li>
+            <li>
+              let x = 10; let y = x; x = 20; ==> only change the value of x,
+              value of y will still be 10
+            </li>
+            <li>let x = {value: 10}; let y = x; x.value = 20;</li>
+            <li>
+              value type: number, string, boolean, symbol, undefined, null
+            </li>
+            <li>reference type: object, function, array</li>
+          </ul>
+        </div>
+
+        <!-- enumerating properties of an object -->
+        <div>
+          <h3>enumerating properties of an object</h3>
+          <ul class="content-list">
+            <li>for in can be used for object</li>
+            <li>
+              for of loop cannot be used for object as object is not iterable,
+              but we can iterate the key of an object
+            </li>
+            <li>for (let key of Object.keys(circle1)) console.log(key)</li>
+            <li>we can also access object using Object.entries</li>
+            <li>
+              if ('color' in circle) console.log('yse')==> to see whether the
+              object have this method
+            </li>
+          </ul>
+        </div>
+
+        <!-- cloning an object -->
+        <div>
+          <h3>cloning an object</h3>
+          <ul class="content-list">
+            <li>loop through key of object to clone</li>
+            <li>combine object: const another = Object.assign({}, circle1)</li>
+            <li>spread operator: const anotherCircle = {...circle1}</li>
+          </ul>
+        </div>
+
+        <!-- garbage collection -->
+        <div>
+          <h3>garbage collection</h3>
+          <ul class="content-list">
+            <li>no control, auto deactivate variable storage</li>
+          </ul>
+        </div>
+
+        <!-- math-->
+        <div>
+          <h3>math</h3>
+          <ul class="content-list">
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math"
+                >math</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- string -->
+        <div>
+          <h3>string</h3>
+          <ul class="content-list">
+            <li>two type of stings: primitive type and object</li>
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"
+                >string</a
+              >
+            </li>
+            <li>
+              we can create a string object, but when we assign a text to string
+              type, it will wrap by js with an object
+            </li>
+          </ul>
+        </div>
+        <!-- template literals -->
+        <div>
+          <h3>template literals</h3>
+          <ul class="content-list">
+            <li>`this is my message`</li>
+            <li>
+              use template literal to format our string so we don't need to type
+              \n etc
+            </li>
+            <li>useful when we want to send email</li>
+          </ul>
+        </div>
+
+        <!-- date -->
+        <div>
+          <h3>date</h3>
+          <ul class="content-list">
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
+                >date</a
+              >
+            </li>
+            <li>have a lot of get and set method</li>
+          </ul>
+        </div>
+      </div>
+      <div><img src="/image/price_range.png" alt=""></div>
+    </section>
+
+    <!-- array -->
+    <section class="block">
+        <h2 class="block--header">array</h2>
+        <div class="container grid grid--1x2">
+          <!-- adding element -->
+          <div>
+            <h3>adding element</h3>
+            <ul class="content-list">
+              <li>push add to the end</li>
+              <li>unshift add to the beginning</li>
+              <li>splice add to middle, also can delete</li>
+              <li></li>
+            </ul>
+          </div>
+          <!-- factory function -->
+          <div>
+            <h3>factory function</h3>
+            <ul class="content-list">
+              <li>use camel notation: oneTwoThreeFour</li>
+              <li>
+                when we want to create multiple object with the same method or
+                attributes.
+              </li>
+              <li>use dot notation to call a method inside an object</li>
+            </ul>
+          </div>
+
+
+          <!-- constructor function -->
+          <div>
+            <h3>constructor function</h3>
+            <ul class="content-list">
+              <li>Pascal notation:OneTwoThreeFour</li>
+              <li>pick one between constructor and factory</li>
+              <li>need to use new keyword when constructing a new object</li>
+            </ul>
+          </div>
+  
+          <!-- dynamic object -->
+          <div>
+            <h3>dynamic object</h3>
+            <ul class="content-list">
+              <li>
+                objects are dynamic, we can add method to it using the dot
+                notation
+              </li>
+              <li>use delete key word to delete method or property</li>
+              <li>
+                const is used to create an object, it mean we can't reassign the
+                object but wee can change the object by changing the property
+              </li>
+            </ul>
+          </div>
+  
+          <!-- constructor property -->
+          <div>
+            <h3>constructor property</h3>
+            <ul class="content-list">
+              <li>
+                each object have an constructor function, which is the internal
+                function that JS used to create the object
+              </li>
+            </ul>
+          </div>
+  
+          <!-- function are object -->
+          <div>
+            <h3>function are object</h3>
+            <ul class="content-list">
+              <li>const person1 = { name : 'vicki', age: 30 };</li>
+              <li>for(let key in person1) console.log(key, person1[key]);</li>
+              <li>good for iterate over an object</li>
+            </ul>
+          </div>
+  
+          <!-- value vs reference type -->
+          <div>
+            <h3>value vs reference type</h3>
+            <ul class="content-list">
+              <li>Primitives are copied by their value</li>
+              <li>
+                objects are copied by their reference, when copy an object, we
+                copied it's address so when we change the value using that
+                address, the changes will reflect to other variable as well
+              </li>
+              <li>
+                let x = 10; let y = x; x = 20; ==> only change the value of x,
+                value of y will still be 10
+              </li>
+              <li>let x = {value: 10}; let y = x; x.value = 20;</li>
+              <li>
+                value type: number, string, boolean, symbol, undefined, null
+              </li>
+              <li>reference type: object, function, array</li>
+            </ul>
+          </div>
+  
+          <!-- enumerating properties of an object -->
+          <div>
+            <h3>enumerating properties of an object</h3>
+            <ul class="content-list">
+              <li>for in can be used for object</li>
+              <li>
+                for of loop cannot be used for object as object is not iterable,
+                but we can iterate the key of an object
+              </li>
+              <li>for (let key of Object.keys(circle1)) console.log(key)</li>
+              <li>we can also access object using Object.entries</li>
+              <li>
+                if ('color' in circle) console.log('yse')==> to see whether the
+                object have this method
+              </li>
+            </ul>
+          </div>
+  
+          <!-- cloning an object -->
+          <div>
+            <h3>cloning an object</h3>
+            <ul class="content-list">
+              <li>loop through key of object to clone</li>
+              <li>combine object: const another = Object.assign({}, circle1)</li>
+              <li>spread operator: const anotherCircle = {...circle1}</li>
+            </ul>
+          </div>
+  
+          <!-- garbage collection -->
+          <div>
+            <h3>garbage collection</h3>
+            <ul class="content-list">
+              <li>no control, auto deactivate variable storage</li>
+            </ul>
+          </div>
+  
+          <!-- math-->
+          <div>
+            <h3>math</h3>
+            <ul class="content-list">
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math"
+                  >math</a
+                >
+              </li>
+            </ul>
+          </div>
+  
+          <!-- string -->
+          <div>
+            <h3>string</h3>
+            <ul class="content-list">
+              <li>two type of stings: primitive type and object</li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"
+                  >string</a
+                >
+              </li>
+              <li>
+                we can create a string object, but when we assign a text to string
+                type, it will wrap by js with an object
+              </li>
+            </ul>
+          </div>
+          <!-- template literals -->
+          <div>
+            <h3>template literals</h3>
+            <ul class="content-list">
+              <li>`this is my message`</li>
+              <li>
+                use template literal to format our string so we don't need to type
+                \n etc
+              </li>
+              <li>useful when we want to send email</li>
+            </ul>
+          </div>
+  
+          <!-- date -->
+          <div>
+            <h3>date</h3>
+            <ul class="content-list">
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
+                  >date</a
+                >
+              </li>
+              <li>have a lot of get and set method</li>
+            </ul>
+          </div>
+        </div>
+        <div><img src="/image/price_range.png" alt=""></div>
+      </section>
+
+
+
+    <script src="/script/codemirror.js"></script>
+    <script src="/script/JS_1.js"></script>
+    <script src="/script/object_ex.js"></script>
+  </body>
 </html>

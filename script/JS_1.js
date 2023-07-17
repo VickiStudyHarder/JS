@@ -388,28 +388,71 @@ circle1.draw();
 
 //constructor function
 function Circle(radius) {
-    this.radius = radius;
-    this.draw = function() {
-        console.log("draw");
-    }
+  this.radius = radius;
+  this.draw = function () {
+    console.log("draw");
+  };
 }
-//use the new keyword, we create an empty object 
+//use the new keyword, we create an empty object
 //then it will set this to point to that object
 // then set circle2 point to this object
 const circle2 = new Circle(1);
 
 // value vs reference type
-let x1 = 10; 
-let y1 = x1; 
+let x1 = 10;
+let y1 = x1;
 x1 = 20;
-console.log('x1: ', x1)
-console.log('y1: ', y1)
+console.log("x1: ", x1);
+console.log("y1: ", y1);
 
-let x2 = {value: 10}; 
-let y2 = x2; 
+let x2 = { value: 10 };
+let y2 = x2;
 x2.value = 20;
-console.log('x2: ', x2)
-console.log('y2: ', y2)
+console.log("x2: ", x2);
+console.log("y2: ", y2);
 
 // enumerating properties of an object
-for (let key of Object.keys(circle1)) console.log(key)
+for (let key of Object.keys(circle1)) console.log(key);
+//return array of key
+
+//cloning object
+const another = Object.assign(
+  {
+    color: "yellow",
+  },
+  circle1
+);
+console.log("another:", another);
+
+//spread operator
+const anotherCircle = { ...circle1 };
+console.log("anotherCircle:", anotherCircle);
+
+//template literal
+const message1 = "This is my\n" + "'first' message";
+
+const name1 = "vicki";
+
+const message2 = `Hi ${name1}
+${2 + 3}
+This is my
+'first' message`;
+
+console.log(message1);
+console.log(message2);
+
+//date
+const now = new Date();
+const data1 = new Date("May 11 2018 09:00");
+const data2 = new Date(2018, 4, 11, 9);
+now.setFullYear(2017);
+console.log(now.toDateString());
+console.log(now.toISOString()); //used for transfer value to backend
+
+//array
+//adding array
+const array1 = [3,4];
+array1.push(5,6);
+array1.unshift(1,2);
+array1.splice(2,0,'a','b');
+console.log('array1: ', array1);
