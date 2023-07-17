@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/eclipse.min.css"
-    />
+
     <link rel="stylesheet" href="/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/codemirror@5.62.0/lib/codemirror.css"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/eclipse.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/codemirror@5.62.0/lib/codemirror.js"></script>
   </head>
   <body>
@@ -114,6 +114,7 @@
           <h3>functions</h3>
           <ul class="content-list">
             <li>function can have multiple parameter</li>
+            <li>function should just be responsible for one thing</li>
           </ul>
         </div>
 
@@ -223,17 +224,15 @@
             <li>example use for access control system</li>
           </ul>
         </div>
-        <div>
-          <h3>operator precedence</h3>
-        </div>
       </div>
     </section>
+
     <!-- control flow -->
     <section class="block">
-      <h2 class="block--header">operator</h2>
+      <h2 class="block--header">control flow</h2>
       <div class="container grid grid--1x2">
         <div>
-          <h3>if..else</h3>
+          <h3>if...else</h3>
           <ul class="content-list">
             <li>
               if (condition) { statement } else if (condition) { statement }
@@ -244,48 +243,308 @@
             <li>otherwise: good evening;</li>
           </ul>
         </div>
-        <div id="codeArea1">
-          <textarea id="code-editor">
-//if..else;
-let hour = 10;
-if (hour >= 6 && hour < 12) {
-    console.log('Good morning');
-} 
-else if (hour >= 12 && hour < 18) {
-    console.log('Good afternoon');
-} 
-else {
-    console.log('Good evening');
-}
-
-        </textarea
-          >
-          <div id="console"></div>
-          <button id="run-button">run</button>
-        </div>
-
         <div>
-          <h3>switch..case</h3>
-          <div>sdas</div>
-        </div>
-
-        <div>
-          <h3>logical operator with non-boolean</h3>
+          <h3>switch...case</h3>
           <ul class="content-list">
             <li>
-              result of logical operator not necessary to be true or false
-              depend on the operands
+              switch (role) { case 'guest': console.log('Guest User') break;
+              //if not break it will execute to next block case 'moderator':
+              console.log('Moderator User') break; }
             </li>
-            <li>falsy: undefined, null, 0, false, '', NaN(not a number)</li>
-            <li>truthy: anything not falsy</li>
+            <li>if hour is between 6am and 12pm: good morning;</li>
+            <li>hour is between 12pm and 6pm: good afternoon;</li>
+            <li>otherwise: good evening;</li>
+          </ul>
+        </div>
+        <!-- for loop -->
+        <div>
+          <h3>for loop</h3>
+          <ul class="content-list">
+            <li>for (let i = 0; i < 5; i++) { console.log(i); }</li>
+            <li>0 1 2 3 4</li>
             <li>
-              short circuiting: false || 2 || 1: return 2, get to truthy return
-              truthy and ignore the rest
+              use % to get odd/even, start from the back with-- to reverse order
             </li>
+            <li>i only accessible inside the loop</li>
+            <li>return in a loop will exit the loop</li>
+          </ul>
+        </div>
+        <!-- playground -->
+        <div id="codeArea1">
+          <h3>playground</h3>
+          <textarea class="cm-s-eclipse" id="code-editor1">
+  //if..else;
+  let hour = 10;
+  if (hour >= 6 && hour < 12) {
+      console.log('Good morning');
+  } 
+  else if (hour >= 12 && hour < 18) {
+      console.log('Good afternoon');
+  } 
+  else {
+      console.log('Good evening');
+  }
+          </textarea>
+          <div id="console1"></div>
+          <button id="run-button1">run</button>
+        </div>
+
+        <!-- while lop -->
+        <div>
+          <h3>while loop</h3>
+          <ul class="content-list">
+            <li>
+              let i = 0; while (i <= 5) { if (i % 2 != 0) console.log(i); i++; }
+            </li>
+            <li>1 3 5</li>
+            <li>need to declare the i outside the while loop</li>
+          </ul>
+        </div>
+
+        <!-- do while loop -->
+        <div>
+          <h3>do while loop</h3>
+          <ul class="content-list">
+            <li>
+              let i = 0; while (i <= 5) { if (i % 2 != 0) console.log(i); i++; }
+            </li>
+            <li>do while loop will at least execute once</li>
+          </ul>
+        </div>
+
+        <!-- for in loop -->
+        <div>
+          <h3>for in loop</h3>
+          <ul class="content-list">
+            <li>const person1 = { name : 'vicki', age: 30 };</li>
+            <li>for(let key in person1) console.log(key, person1[key]);</li>
+            <li>good for iterate over an object</li>
+          </ul>
+        </div>
+
+        <!-- for of loop -->
+        <div>
+          <h3>for of loop</h3>
+          <ul class="content-list">
+            <li>const colors = ["red", "blue", "green"];</li>
+            <li>for (let color of colors) { console.log(color); }</li>
+            <li>better then for in when iterate through array</li>
+          </ul>
+        </div>
+
+        <!-- break and continue -->
+        <div>
+          <h3>break and continue</h3>
+          <ul class="content-list">
+            <li>
+              while (q <= 10) { if (q % 2 === 0) { q++; continue; }
+              console.log(q); q++; }
+            </li>
+            <li>continue will bring the loop back to next while</li>
+            <li>break will just just out of while loop</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- object -->
+    <section class="block">
+      <h2 class="block--header">object</h2>
+      <div class="container grid grid--1x2">
+        <!-- basic -->
+        <div>
+          <h3>basic</h3>
+          <ul class="content-list">
+            <li>grouping related variable and functions</li>
+            <li>if a function is part of a object it is method</li>
+          </ul>
+        </div>
+        <!-- factory function -->
+        <div>
+          <h3>factory function</h3>
+          <ul class="content-list">
+            <li>use camel notation: oneTwoThreeFour</li>
+            <li>
+              when we want to create multiple object with the same method or
+              attributes.
+            </li>
+            <li>use dot notation to call a method inside an object</li>
+          </ul>
+        </div>
+        <!-- code space -->
+        <div id="codeArea2">
+          <textarea id="code-editor2">
+function createCircle(radius, location) { 
+    return { 
+        radius, 
+        draw()
+        { console.log("draw");
+        }, 
+    }; 
+}
+const circle1 = createCircle(10);
+console.log("circle1: ", circle1);
+circle1.draw();
+
+// constructor
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function() {
+        console.log("draw");
+    }
+}
+const circle2 = new Circle(1);
+
+
+            </textarea
+          >
+          <div id="console2"></div>
+          <button id="run-button2">run</button>
+        </div>
+        <!-- constructor function -->
+        <div>
+          <h3>constructor function</h3>
+          <ul class="content-list">
+            <li>Pascal notation:OneTwoThreeFour</li>
+            <li>pick one between constructor and factory</li>
+          </ul>
+        </div>
+
+        <!-- dynamic object -->
+        <div>
+          <h3>dynamic object</h3>
+          <ul class="content-list">
+            <li>
+              objects are dynamic, we can add method to it using the dot
+              notation
+            </li>
+            <li>use delete key word to delete method or property</li>
+            <li>
+              const is used to create an object, it mean we can't reassign the
+              object but wee can change the object by changing the property
+            </li>
+          </ul>
+        </div>
+
+        <!-- constructor property -->
+        <div>
+          <h3>constructor property</h3>
+          <ul class="content-list">
+            <li>
+              each object have an constructor function, which is the internal
+              function that JS used to create the object
+            </li>
+          </ul>
+        </div>
+
+        <!-- function are object -->
+        <div>
+          <h3>function are object</h3>
+          <ul class="content-list">
+            <li>const person1 = { name : 'vicki', age: 30 };</li>
+            <li>for(let key in person1) console.log(key, person1[key]);</li>
+            <li>good for iterate over an object</li>
+          </ul>
+        </div>
+
+        <!-- value vs reference type -->
+        <div>
+          <h3>value vs reference type</h3>
+          <ul class="content-list">
+            <li>Primitives are copied by their value</li>
+            <li>
+              objects are copied by their reference, when copy an object, we
+              copied it's address so when we change the value using that
+              address, the changes will reflect to other variable as well
+            </li>
+            <li>
+              let x = 10; let y = x; x = 20; ==> only change the value of x,
+              value of y will still be 10
+            </li>
+            <li>let x = {value: 10}; let y = x; x.value = 20;</li>
+            <li>
+              value type: number, string, boolean, symbol, undefined, null
+            </li>
+            <li>reference type: object, function, array</li>
+          </ul>
+        </div>
+
+        <!-- enumerating properties of an object -->
+        <div>
+          <h3>enumerating properties of an object</h3>
+          <ul class="content-list">
+            <li>for in can be used for object</li>
+            <li>
+              for of loop cannot be used for object as object is not iterable, but we can iterate the key of an object
+            </li>
+            <li>for (let key of Object.keys(circle1)) console.log(key)</li>
+            <li>we can also access object using Object.entries</li>
+            <li>if ('color' in circle) console.log('yse')==> to see whether the object have this method</li>
+
+          </ul>
+        </div>
+
+        <!-- cloning an object -->
+        <div>
+          <h3>cloning an object</h3>
+          <ul class="content-list">
+            <li>const colors = ["red", "blue", "green"];</li>
+            <li>for (let color of colors) { console.log(color); }</li>
+            <li>better then for in when iterate through array</li>
+          </ul>
+        </div>
+
+        <!-- break and continue -->
+        <div>
+          <h3>garbage collection</h3>
+          <ul class="content-list">
+            <li>const colors = ["red", "blue", "green"];</li>
+            <li>for (let color of colors) { console.log(color); }</li>
+            <li>better then for in when iterate through array</li>
+          </ul>
+        </div>
+
+        <!-- break and continue -->
+        <div>
+          <h3>math</h3>
+          <ul class="content-list">
+            <li>const colors = ["red", "blue", "green"];</li>
+            <li>for (let color of colors) { console.log(color); }</li>
+            <li>better then for in when iterate through array</li>
+          </ul>
+        </div>
+
+        <!-- break and continue -->
+        <div>
+          <h3>string</h3>
+          <ul class="content-list">
+            <li>const colors = ["red", "blue", "green"];</li>
+            <li>for (let color of colors) { console.log(color); }</li>
+            <li>better then for in when iterate through array</li>
+          </ul>
+        </div>
+        <!-- break and continue -->
+        <div>
+          <h3>template literals</h3>
+          <ul class="content-list">
+            <li>const colors = ["red", "blue", "green"];</li>
+            <li>for (let color of colors) { console.log(color); }</li>
+            <li>better then for in when iterate through array</li>
+          </ul>
+        </div>
+
+        <!-- break and continue -->
+        <div>
+          <h3>date</h3>
+          <ul class="content-list">
+            <li>const colors = ["red", "blue", "green"];</li>
+            <li>for (let color of colors) { console.log(color); }</li>
+            <li>better then for in when iterate through array</li>
           </ul>
         </div>
       </div>
     </section>
     <script src="/script/codemirror.js"></script>
+    <script src="/script/JS_1.js"></script>
   </body>
 </html>
