@@ -449,27 +449,3 @@ now.setFullYear(2017);
 console.log(now.toDateString());
 console.log(now.toISOString()); //used for transfer value to backend
 
-//array
-//adding array
-const array1 = [3, 4];
-array1.push(5, 6);
-array1.unshift(1, 2);
-array1.splice(2, 0, "a", "b");
-console.log("array1: ", array1);
-
-//find element in array
-const courses = [
-  { id: 1, name: "a" },
-  { id: 2, name: "b" },
-];
-
-const course = courses.find(function (course) {
-  return (course.name = "a");
-});
-
-console.log(course);
-
-//arrow function same as above
-const course1 = courses.find((course) => (course.name = "a"));
-
-//remove element

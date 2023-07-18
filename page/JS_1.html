@@ -564,208 +564,166 @@ const circle2 = new Circle(1);
           </ul>
         </div>
       </div>
-      <div><img src="/image/price_range.png" alt=""></div>
+      <div><img src="/image/price_range.png" alt="" /></div>
     </section>
 
     <!-- array -->
     <section class="block">
-        <h2 class="block--header">array</h2>
-        <div class="container grid grid--1x2">
-          <!-- adding element -->
-          <div>
-            <h3>adding element</h3>
-            <ul class="content-list">
-              <li>push add to the end</li>
-              <li>unshift add to the beginning</li>
-              <li>splice add to middle, also can delete</li>
-              <li></li>
-            </ul>
-          </div>
-          <!-- finding element -->
-          <div>
-            <h3>finding element</h3>
-            <ul class="content-list">
-              <li>indexOf return index, can include second parameter to set the start of the search</li>
-              <li>
-                lastIndexOf, search from the back
-              </li>
-              <li>include return boolean</li>
-              <li>find, support a function that check each element in an array, return the element that is true</li>
-              <li>findIndex, same but return index</li>
-              <li>arrow function to make it cleaner</li>
-            </ul>
-          </div>
-
-
-          <!-- remove element -->
-          <div>
-            <h3>remove element</h3>
-            <ul class="content-list">
-              <li>pop remove the last element</li>
-              <li>shift remove from start</li>
-              <li>splice, first argument position of removing, second argument number of element to remove</li>
-            </ul>
-          </div>
-  
-          <!-- dynamic object -->
-          <div>
-            <h3>dynamic object</h3>
-            <ul class="content-list">
-              <li>
-                objects are dynamic, we can add method to it using the dot
-                notation
-              </li>
-              <li>use delete key word to delete method or property</li>
-              <li>
-                const is used to create an object, it mean we can't reassign the
-                object but wee can change the object by changing the property
-              </li>
-            </ul>
-          </div>
-  
-          <!-- constructor property -->
-          <div>
-            <h3>constructor property</h3>
-            <ul class="content-list">
-              <li>
-                each object have an constructor function, which is the internal
-                function that JS used to create the object
-              </li>
-            </ul>
-          </div>
-  
-          <!-- function are object -->
-          <div>
-            <h3>function are object</h3>
-            <ul class="content-list">
-              <li>const person1 = { name : 'vicki', age: 30 };</li>
-              <li>for(let key in person1) console.log(key, person1[key]);</li>
-              <li>good for iterate over an object</li>
-            </ul>
-          </div>
-  
-          <!-- value vs reference type -->
-          <div>
-            <h3>value vs reference type</h3>
-            <ul class="content-list">
-              <li>Primitives are copied by their value</li>
-              <li>
-                objects are copied by their reference, when copy an object, we
-                copied it's address so when we change the value using that
-                address, the changes will reflect to other variable as well
-              </li>
-              <li>
-                let x = 10; let y = x; x = 20; ==> only change the value of x,
-                value of y will still be 10
-              </li>
-              <li>let x = {value: 10}; let y = x; x.value = 20;</li>
-              <li>
-                value type: number, string, boolean, symbol, undefined, null
-              </li>
-              <li>reference type: object, function, array</li>
-            </ul>
-          </div>
-  
-          <!-- enumerating properties of an object -->
-          <div>
-            <h3>enumerating properties of an object</h3>
-            <ul class="content-list">
-              <li>for in can be used for object</li>
-              <li>
-                for of loop cannot be used for object as object is not iterable,
-                but we can iterate the key of an object
-              </li>
-              <li>for (let key of Object.keys(circle1)) console.log(key)</li>
-              <li>we can also access object using Object.entries</li>
-              <li>
-                if ('color' in circle) console.log('yse')==> to see whether the
-                object have this method
-              </li>
-            </ul>
-          </div>
-  
-          <!-- cloning an object -->
-          <div>
-            <h3>cloning an object</h3>
-            <ul class="content-list">
-              <li>loop through key of object to clone</li>
-              <li>combine object: const another = Object.assign({}, circle1)</li>
-              <li>spread operator: const anotherCircle = {...circle1}</li>
-            </ul>
-          </div>
-  
-          <!-- garbage collection -->
-          <div>
-            <h3>garbage collection</h3>
-            <ul class="content-list">
-              <li>no control, auto deactivate variable storage</li>
-            </ul>
-          </div>
-  
-          <!-- math-->
-          <div>
-            <h3>math</h3>
-            <ul class="content-list">
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math"
-                  >math</a
-                >
-              </li>
-            </ul>
-          </div>
-  
-          <!-- string -->
-          <div>
-            <h3>string</h3>
-            <ul class="content-list">
-              <li>two type of stings: primitive type and object</li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"
-                  >string</a
-                >
-              </li>
-              <li>
-                we can create a string object, but when we assign a text to string
-                type, it will wrap by js with an object
-              </li>
-            </ul>
-          </div>
-          <!-- template literals -->
-          <div>
-            <h3>template literals</h3>
-            <ul class="content-list">
-              <li>`this is my message`</li>
-              <li>
-                use template literal to format our string so we don't need to type
-                \n etc
-              </li>
-              <li>useful when we want to send email</li>
-            </ul>
-          </div>
-  
-          <!-- date -->
-          <div>
-            <h3>date</h3>
-            <ul class="content-list">
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
-                  >date</a
-                >
-              </li>
-              <li>have a lot of get and set method</li>
-            </ul>
-          </div>
+      <h2 class="block--header">array</h2>
+      <div class="container grid grid--1x2">
+        <!-- adding element -->
+        <div>
+          <h3>adding element</h3>
+          <ul class="content-list">
+            <li>push add to the end</li>
+            <li>unshift add to the beginning</li>
+            <li>splice add to middle, also can delete</li>
+          </ul>
         </div>
-        <div><img src="/image/price_range.png" alt=""></div>
-      </section>
+        <!-- finding element -->
+        <div>
+          <h3>finding element</h3>
+          <ul class="content-list">
+            <li>
+              indexOf return index, can include second parameter to set the
+              start of the search
+            </li>
+            <li>lastIndexOf, search from the back</li>
+            <li>include return boolean</li>
+            <li>
+              find, support a function that check each element in an array,
+              return the element that is true
+            </li>
+            <li>findIndex, same but return index</li>
+            <li>arrow function to make it cleaner</li>
+          </ul>
+        </div>
+        <!-- remove element -->
+        <div>
+          <h3>remove element</h3>
+          <ul class="content-list">
+            <li>pop remove the last element</li>
+            <li>shift remove from start</li>
+            <li>
+              splice, first argument position of removing, second argument
+              number of element to remove
+            </li>
+          </ul>
+        </div>
 
+        <!-- emptying array -->
+        <div>
+          <h3>emptying array</h3>
+          <ul class="content-list">
+            <li>number = []</li>
+            <li>number.length = 0;</li>
+            <li>number.splice(0, number.length)</li>
+            <li>while (number.length > 0) number.pop();</li>
+          </ul>
+        </div>
 
+        <!-- combine and slicing -->
+        <div>
+          <h3>combine and slicing</h3>
+          <ul class="content-list">
+            <li>concat</li>
+            <li>slice: slice() can copy</li>
+            <li>
+              if the element is primitive they are copied by value, won't change
+              the value
+            </li>
+            <li>
+              if the element is object they are copied by reference, change in
+              the object will change the copied item
+            </li>
+          </ul>
+        </div>
+
+        <!-- spread operator -->
+        <div>
+          <h3>spread operator(ES6)</h3>
+          <ul class="content-list">
+            <li>const combined = [...first, 'a', ...second];</li>
+            <li>const copy = [...combined]</li>   
+          </ul>
+        </div>
+
+        <!-- iterating array -->
+        <div>
+          <h3>iterating array</h3>
+          <ul class="content-list">
+            <li>forEach function which takes a callback function and return each element of the array as the parameter</li>
+            
+          </ul>
+        </div>
+
+        <!-- joining array -->
+        <div>
+          <h3>joining array</h3>
+          <ul class="content-list">
+            <li>join</li>
+            <li>split</li>
+            <li>you can split a text hen join it using other separator to create URL</li>
+            
+          </ul>
+        </div>
+
+        <!-- sorting array -->
+        <div>
+          <h3>sorting array</h3>
+          <ul class="content-list">
+            <li>sort: convert each element to string then sort</li>
+            <li>reverse: reverse an array</li>
+            <li>sorting array of object need to use sort with a function</li> 
+          </ul>
+        </div>
+
+        <!-- testing element of array -->
+        <div>
+          <h3>testing element of array</h3>
+          <ul class="content-list">
+            <li>const allPositive = numbers.every(function (value) {
+              return value >= 0;
+            });</li>
+            <li>return true or false</li>
+            <li>some</li>
+          </ul>
+        </div>
+
+        <!--filtering-->
+        <div>
+          <h3>filtering</h3>
+          <ul class="content-list">
+            <li>
+              filter()
+            </li>
+          </ul>
+        </div>
+
+        <!-- mapping -->
+        <div>
+          <h3>mapping</h3>
+          <ul class="content-list">
+            <li>mapping can be used to create html</li>
+            <li>mapping can used to map an array to multiple object</li>
+          </ul>
+        </div>
+        <!-- reducing array -->
+        <div>
+          <h3>reducing array</h3>
+          <ul class="content-list">
+            <li>reduce(callback function, initial value for accumulator): it's like a reducer in scala </li>
+            <li>call back function(accumulator, currentValue)</li>
+           
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <script src="/script/codemirror.js"></script>
     <script src="/script/JS_1.js"></script>
     <script src="/script/object_ex.js"></script>
+    <script src="/script/array.js"></script>
+    <script src="/script/array_ex.js"></script>
   </body>
 </html>
